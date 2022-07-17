@@ -1,10 +1,13 @@
 package com.in28minutes.junit.helper;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 public class QuickBeforeAfterTest {
+
+    @BeforeClass
+    public static void beforeClass(){
+        System.out.println("Before Class");
+    }
 
     @Before
     public void setup(){
@@ -24,6 +27,11 @@ public class QuickBeforeAfterTest {
     @After
     public void teardown(){
         System.out.println("After Test");
+    }
+
+    @AfterClass
+    public static void afterClass(){
+        System.out.println("After Class");
     }
 
 }
